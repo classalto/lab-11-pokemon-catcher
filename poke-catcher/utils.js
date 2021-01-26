@@ -52,7 +52,7 @@ export function renderPokemonImg(pokemonInstance) {
     image.addEventListener('click', () => {
         incrementCaught(pokemonInstance.id);
 
-        if (gamesPlayed < 7) {
+        if (gamesPlayed <= 10) {
             setRandomPokemon();
         } else {
             window.location = 'results';
