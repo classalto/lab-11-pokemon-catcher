@@ -9,6 +9,6 @@ const button = document.getElementById('clear');
 
 button.addEventListener('click', () => {
     clearPokeStats();
-    window.location.href = '../index.html';
+    window.location.href = './index.html';
 });
 makePokeRows();
