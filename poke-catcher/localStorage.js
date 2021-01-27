@@ -1,6 +1,7 @@
 import { findById } from './utils.js';
 const POKELOG = 'POKELOG';
 
+
 export function getPokeStats() {
     let log = JSON.parse(localStorage.getItem(POKELOG));
 
@@ -13,6 +14,10 @@ export function getPokeStats() {
 
 export function setPokeStats(newLog) {
     localStorage.setItem(POKELOG, JSON.stringify(newLog));
+}
+
+export function clearPokeStats() {
+    localStorage.setItem(POKELOG, JSON.stringify([]));
 }
 
 export function incrementSeen(id) {

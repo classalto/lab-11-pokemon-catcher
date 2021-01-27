@@ -1,9 +1,14 @@
-import { logRows } from './result-utils.js';
+import { clearPokeStats } from '../poke-catcher/localStorage.js';
+import { makePokeRows } from './result-utils.js';
 
-const div = document.getElementById('result');
-const table = document.createElement('table');
 
-const pokeRows = logRows();
 
-table.append(pokeRows);
-div.append(table);
+
+const button = document.getElementById('clear');
+
+
+button.addEventListener('click', () => {
+    clearPokeStats();
+    window.location.href = '../index.html';
+});
+makePokeRows();
