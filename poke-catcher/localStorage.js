@@ -1,4 +1,5 @@
 import { findById } from './utils.js';
+import { pokeData } from '../pokemon.js';
 const POKELOG = 'POKELOG';
 
 
@@ -26,7 +27,9 @@ export function incrementSeen(id) {
     const poke = findById(id, log);
 
     if (!poke) {
+        const dataPokemon = findById(id, pokeData);
         const newLog = {
+            name: dataPokemon.pokemon,
             id: id,
             seen: 1,
             caught: 0,
