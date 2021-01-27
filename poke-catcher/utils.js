@@ -55,7 +55,7 @@ export function renderPokemonImg(pokemonInstance) {
         if (gamesPlayed <= 10) {
             setRandomPokemon();
         } else {
-            window.location.href = '../result-page.html';
+            window.location.href = './result-page.html';
         }
     });
     return image;
