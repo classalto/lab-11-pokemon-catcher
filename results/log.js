@@ -1,6 +1,7 @@
 import { clearPokeStats } from '../poke-catcher/localStorage.js';
 import { makePokeRows } from './result-utils.js';
 import { getPokeStats } from '../poke-catcher/localStorage.js';
+import { makeSeenArray, makeCaughtArray, makeLabelsArray } from './chart-utils.js';
 
 
 
@@ -15,7 +16,7 @@ button.addEventListener('click', () => {
 makePokeRows();
 
 
-var ctx = document.getElementById('chart').getContext('2d');
+var ctx = document.getElementById('charts').getContext('2d');
 
 const pokeStats = getPokeStats();
 
